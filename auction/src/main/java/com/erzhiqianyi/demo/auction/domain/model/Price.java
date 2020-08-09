@@ -1,8 +1,11 @@
 package com.erzhiqianyi.demo.auction.domain.model;
 
+import lombok.Getter;
+
 import java.util.Optional;
 import java.util.stream.Stream;
 
+@Getter
 public class Price {
     private final Money amount;
 
@@ -16,6 +19,7 @@ public class Price {
         }
         this.amount = amount;
     }
+
 
     public Money bidIncrement() {
         Money incrementStep = IncrementStep.incrementStep(amount);
@@ -58,5 +62,7 @@ public class Price {
         }
 
     }
+
+
 
 }
